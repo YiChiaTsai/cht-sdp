@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/RICHARD-TSAI/GitHub/cht-sdp/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
-        "source": "/Users/RICHARD-TSAI/GitHub/cht-sdp/app/src/main/res/menu/menu_main.xml"
+        "merged": "C:\\Users\\RICHARD-TSAI\\GitHub\\cht-sdp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\RICHARD-TSAI\\GitHub\\cht-sdp\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\SensorTeam\\AndroidProject\\cht-sdp\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\SensorTeam\\AndroidProject\\cht-sdp\\app\\src\\main\\res\\menu\\menu_main.xml"
     }
 ]

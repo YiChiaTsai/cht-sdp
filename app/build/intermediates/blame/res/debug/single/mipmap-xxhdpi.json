@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/RICHARD-TSAI/GitHub/cht-sdp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
-        "source": "/Users/RICHARD-TSAI/GitHub/cht-sdp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\RICHARD-TSAI\\GitHub\\cht-sdp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\RICHARD-TSAI\\GitHub\\cht-sdp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\SensorTeam\\AndroidProject\\cht-sdp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\SensorTeam\\AndroidProject\\cht-sdp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]
