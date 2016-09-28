@@ -32,7 +32,7 @@ import java.util.TimerTask;
 import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
-
+//comment
     private TextView RX;
     private TextView TX;
     private Timer timer;
