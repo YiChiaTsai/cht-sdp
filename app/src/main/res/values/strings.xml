@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">smart-data-pricing</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="prompt_message">Sensor Value</string>
+    <string name="button_trigger">Start</string>
+</resources>

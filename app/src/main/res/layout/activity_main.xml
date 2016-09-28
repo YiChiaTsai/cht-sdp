@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main">
+
+    <!--TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_message" />
+
+    <TextView android:id="@+id/X_value"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/Y_value"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/Z_value"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /-->
+
+    <Spinner android:id="@+id/SelectInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ToggleButton android:id="@+id/toggleButton"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_trigger"
+        android:layout_toRightOf="@+id/SelectInterval" />
+
+    <!--TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Received: "
+        android:layout_below="@+id/SelectInterval"/-->
+
+    <TextView android:id="@+id/RX"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="135sp"
+        android:text="Received:"
+        android:layout_below="@+id/toggleButton" />
+
+    <!--TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trainsmitted: " /-->
+
+    <TextView android:id="@+id/TX"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trainsmitted:"
+        android:layout_toRightOf="@id/RX"
+        android:layout_below="@id/toggleButton" />
+
+</RelativeLayout>
