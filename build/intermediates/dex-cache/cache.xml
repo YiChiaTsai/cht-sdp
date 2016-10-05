@@ -2,46 +2,76 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Andy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-22568dec04083595522fe9732edcca4e46b56b36.jar" />
+        sha1="265ac927c9791f842e1dd0a54da08cc3dc80d465">
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_118738d1ecb3ab1d9f6c903b827d18f9bdf27a8c\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.1"
         sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\pre-dexed\debug\classes-19ee7e4d1c3ac9beecc49ca9ca05c09a4a2ca5be.jar" />
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_102376c5c65ef1840446a24514601f07194ebaf1\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\pre-dexed\debug\classes-8489a83c6b787fbfa35a9d6d0a3beee484a3ca0c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.1"
         sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-13d44ae1e052bbdebf1cc2afc5097181c1ea593a.jar" />
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_66e3ebf9aaff8f750dfde9667a9ee0cd147df2b0\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Andy\Desktop\WCC\Android\CHT\app\libs\android-async-http-1.4.9.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_b8b696b61453230ec56bde14096af1b14aff7dcc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.9\386a4339ffe52d5d63e80f9bed8d2b1d1a418249\android-async-http-1.4.9.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.1"
         sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
-        <dex dex="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.9-7400d2cd8e65d15f188f06005e9c563f2d8ebbd6.jar" />
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\android-async-http-1.4.9_703e9bc613283dca890339615d8c3afd785b6d3d\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Andy\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.1"
         sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
-        <dex dex="C:\Users\Andy\Desktop\WCC\Android\CHT\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6-6a3470b8e64c3f9fca71c2894da93f5e8f27585f.jar" />
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\httpclient-4.3.6_3e30f906c16dd27736a82a862514e2def1e79a6f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_2613af4c296d4e4c78d3fd0cc702d3bba3841e1d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f67b238f128702c72272b467c683b161a1405e7f">
+        <dex dex="C:\Users\ChengYuDa\AndroidStudioProjects\workspace-CHT\cht-sdp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a88b7432f860be108edc8109ae7d4b08f0c30588\classes.dex" />
     </item>
 
 </items>

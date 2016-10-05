@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\RICHARD-TSAI\\GitHub\\cht-sdp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+        "outputFile": "C:\\Users\\ChengYuDa\\AndroidStudioProjects\\workspace-CHT\\cht-sdp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "C:\\Users\\RICHARD-TSAI\\GitHub\\cht-sdp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 287,
-                        "endColumn": 55,
-                        "endOffset": 338
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\SensorTeam\\AndroidProject\\cht-sdp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 55,
-                    "endOffset": 106
-                },
-                "from": {
-                    "file": "C:\\Users\\SensorTeam\\AndroidProject\\cht-sdp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
+                    "file": "C:\\Users\\ChengYuDa\\AndroidStudioProjects\\workspace-CHT\\cht-sdp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

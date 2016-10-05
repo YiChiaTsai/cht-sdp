@@ -1,12 +1,16 @@
 package com.example.wei.cht;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.TrafficStats;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +34,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import cz.msebera.android.httpclient.Header;
+
+
+
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
 //comment
@@ -71,7 +78,59 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         toggle = (ToggleButton) findViewById(R.id.toggleButton);    //toggle button(按一次開啟，再按一次關閉那種)
         toggle.setChecked(false);   // 一開始為關閉
         toggle.setOnCheckedChangeListener(toggleListener);
+
+        showDialog();
+
     }
+
+
+    //For dialog
+    private void showDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("有更優惠的時段唷");
+        builder.setMessage("是否確定要在此時使用軟體?");
+        builder.setPositiveButton("我就是要使用",new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.setNegativeButton("算了，我下次再用", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.create().show();
+    }
+
+
+
+//    //傳至Server
+//    public void passToServer(RequestParams params){
+//        AsyncHttpClient client = new AsyncHttpClient();
+//        client.get("http://" + HOST + ":8080/MobileRestServer/rest/hello/ZZ", params, new AsyncHttpResponseHandler() {
+//            @Override
+//            public void onSuccess(int i, Header[] headers, byte[] bytes) {
+//                CharSequence cs = new String(bytes);
+//                Toast toast = Toast.makeText(getApplicationContext(), cs, Toast.LENGTH_SHORT);    //toast 會閃現    用textView來接
+//                toast.show();
+//            }
+//
+//            @Override
+//            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+//                Log.e("InvokeWS", Integer.toString(i));
+//                if (bytes != null) {
+//                    CharSequence cs = new String(bytes);
+//                    Toast toast = Toast.makeText(getApplicationContext(), cs, Toast.LENGTH_SHORT);
+//                    toast.show();
+//                }
+//            }
+//        });
+//    }
+
+
+
 
     /* For sensor，這裡沒用到 */
     @Override
@@ -160,59 +219,103 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         }
     };
+
     /* toggle button 處理 */
     private CompoundButton.OnCheckedChangeListener toggleListener = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            if(isChecked) { // 開啟
-                startSet = true;
-                mRX = TrafficStats.getMobileRxBytes();  // 最初始的流量(是系統一直以來記錄的)
-                mTX = TrafficStats.getMobileTxBytes();  // RX是receieve  TX是transmit
-
-                if(mRX == TrafficStats.UNSUPPORTED || mTX == TrafficStats.UNSUPPORTED) {    //看SDK有沒有支援
-                    Toast toast = Toast.makeText(getApplicationContext(), "TrafficStats is not supported!", Toast.LENGTH_SHORT);
-                    toast.show();
-                }
-                timer = new Timer();    //  設定一個timer，告訴系統多久幫你執行一次
-                //timer.schedule(task, 0, 60000);
-
-    /* 下面四個都是創建project會預設有的function，我沒有做修改 */
-                @Override
-                public boolean onCreateOptionsMenu(Menu menu) {
-                    // Inflate the menu; this adds items to the action bar if it is present.
-                    getMenuInflater().inflate(R.menu.menu_main, menu);
-                    return true;
-                }
-
-                @Override
-                public boolean onOptionsItemSelected(MenuItem item) {
-                    // Handle action bar item clicks here. The action bar will
-                    // automatically handle clicks on the Home/Up button, so long
-                    // as you specify a parent activity in AndroidManifest.xml.
-                    int id = item.getItemId();
-
-                    //noinspection SimplifiableIfStatement
-                    if (id == R.id.action_settings) {
-                timer.schedule(task, 0, recordInterval);
-            } else {    //這邊有個bug，按一下開始記錄，再按一下變暫停，再按開啟一次就會crush，問題應該是出在這(console 大概提到說 Timertask的問題，先麻煩你們看看了)
-                startSet = false;
-                timer.cancel();
-            }
+//            if(isChecked) { // 開啟
+//                startSet = true;
+//                mRX = TrafficStats.getMobileRxBytes();  // 最初始的流量(是系統一直以來記錄的)
+//                mTX = TrafficStats.getMobileTxBytes();  // RX是receieve  TX是transmit
+//
+//                if(mRX == TrafficStats.UNSUPPORTED || mTX == TrafficStats.UNSUPPORTED) {    //看SDK有沒有支援
+//                    Toast toast = Toast.makeText(getApplicationContext(), "TrafficStats is not supported!", Toast.LENGTH_SHORT);
+//                    toast.show();
+//                }
+//                timer = new Timer();    //  設定一個timer，告訴系統多久幫你執行一次
+//                //timer.schedule(task, 0, 60000);
+//
+//    /* 下面四個都是創建project會預設有的function，我沒有做修改 */
+//                @Override
+//                public boolean onCreateOptionsMenu(Menu menu) {
+//                    // Inflate the menu; this adds items to the action bar if it is present.
+//                    getMenuInflater().inflate(R.menu.menu_main, menu);
+//                    return true;
+//                }
+//
+//                @Override
+//                public boolean onOptionsItemSelected(MenuItem item) {
+//                    // Handle action bar item clicks here. The action bar will
+//                    // automatically handle clicks on the Home/Up button, so long
+//                    // as you specify a parent activity in AndroidManifest.xml.
+//                    int id = item.getItemId();
+//
+//                    //noinspection SimplifiableIfStatement
+//                    if (id == R.id.action_settings) {
+//                timer.schedule(task, 0, recordInterval);
+//            } else {    //這邊有個bug，按一下開始記錄，再按一下變暫停，再按開啟一次就會crush，問題應該是出在這(console 大概提到說 Timertask的問題，先麻煩你們看看了)
+//                startSet = false;
+//                timer.cancel();
+//            }
         }
     };
-            return true;
+//            return true;
         }
 
-        return super.onOptionsItemSelected(item);
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
+//資料庫 , 暫時不用(改內部文檔)
+//public class DBHelper extends SQLiteOpenHelper{
+//    // 資料庫名稱
+//    public static final String DATABASE_NAME = "myRule.db";
+//    // 資料庫版本，資料結構改變的時候要更改這個數字，通常是加一
+//    public static final int VERSION = 1;
+//    // 資料庫物件，固定的欄位變數
+//    private static SQLiteDatabase database;
+//
+//    // 建構子，在一般的應用都不需要修改
+//    public DBHelper(Context context, String name, CursorFactory factory,
+//                      int version) {
+//        super(context, name, factory, version);
+//    }
+//
+//    // 需要資料庫的元件呼叫這個方法，這個方法在一般的應用都不需要修改
+//    public static SQLiteDatabase getDatabase(Context context) {
+//        if (database == null || !database.isOpen()) {
+//            database = new DBHelper(context, DATABASE_NAME,
+//                    null, VERSION).getWritableDatabase();
+//        }
+//        return database;
+//    }
+//
+//    @Override
+//    public void onCreate(SQLiteDatabase db) {
+//        // 建立應用程式需要的表格
+//        // 待會再回來完成它
+//    }
+//
+//    @Override
+//    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+//        // 刪除原有的表格
+//        // 待會再回來完成它
+//
+//        // 呼叫onCreate建立新版的表格
+//        onCreate(db);
+//    }
+//
+//}// end 資料庫
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-}
+
+//        return super.onOptionsItemSelected(item);
+//    }
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//    }
+//}
