@@ -29,6 +29,8 @@ import android.os.Handler;
 
 import com.loopj.android.http.*;
 
+import org.w3c.dom.Text;
+
 import java.text.SimpleDateFormat;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -62,6 +64,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     //private Sensor mAccelerometer;
     private ToggleButton toggle;
 
+    // System parameter
+    private String HOST = "192.168.180.128";
+
+    //For Testing
+    private TextView testit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +87,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         toggle.setChecked(false);   // 一開始為關閉
         toggle.setOnCheckedChangeListener(toggleListener);
 
+
         showDialog();
+
+        //For Test
+        testit = (TextView)findViewById(R.id.ForTesting);
 
     }
 
@@ -92,13 +104,17 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         builder.setPositiveButton("我就是要使用",new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                RequestParams params = new RequestParams();
+                params.put("DATA", "welcome to my little world");
+                passToServer(params);
             }
         });
         builder.setNegativeButton("算了，我下次再用", new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                RequestParams params = new RequestParams();
+                params.put("DATA", "byebye");
+                passToServer(params);
             }
         });
         builder.create().show();
@@ -106,28 +122,30 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
 
 
-//    //傳至Server
-//    public void passToServer(RequestParams params){
-//        AsyncHttpClient client = new AsyncHttpClient();
-//        client.get("http://" + HOST + ":8080/MobileRestServer/rest/hello/ZZ", params, new AsyncHttpResponseHandler() {
-//            @Override
-//            public void onSuccess(int i, Header[] headers, byte[] bytes) {
-//                CharSequence cs = new String(bytes);
-//                Toast toast = Toast.makeText(getApplicationContext(), cs, Toast.LENGTH_SHORT);    //toast 會閃現    用textView來接
-//                toast.show();
-//            }
-//
-//            @Override
-//            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-//                Log.e("InvokeWS", Integer.toString(i));
-//                if (bytes != null) {
-//                    CharSequence cs = new String(bytes);
-//                    Toast toast = Toast.makeText(getApplicationContext(), cs, Toast.LENGTH_SHORT);
-//                    toast.show();
-//                }
-//            }
-//        });
-//    }
+    //傳至Server
+    public void passToServer(RequestParams params){
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get("http://" + HOST + ":8080/MobileRestServer/rest/hello/ZZ", params, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int i, Header[] headers, byte[] bytes) {
+                CharSequence cs = new String(bytes);
+                testit.setText(cs);
+                Toast toast = Toast.makeText(getApplicationContext(), cs, Toast.LENGTH_SHORT);    //toast 會閃現    用textView來接
+                toast.show();
+            }
+
+            @Override
+            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+                Log.e("InvokeWS", Integer.toString(i));
+                if (bytes != null) {
+                    CharSequence cs = new String(bytes);
+                    testit.setText(cs);
+                    Toast toast = Toast.makeText(getApplicationContext(), cs, Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+        });
+    }
 
 
 

@@ -68,4 +68,13 @@
         android:layout_toRightOf="@id/RX"
         android:layout_below="@id/toggleButton" />
 
+    <TextView
+        android:text="You can't see me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:id="@+id/ForTesting"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/toggleButton" />
+
 </RelativeLayout>
